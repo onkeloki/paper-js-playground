@@ -1,0 +1,12 @@
+mixin playground(name,background)
+    html
+        head
+            meta(charset='UTF-8')
+            title=name
+            link(rel='stylesheet', href='../css/style.css')
+            script(type='text/javascript', src='blend_color.js')
+            script(type='text/javascript', src='../../dist/paper-full.js')
+            script(type='text/paperscript', canvas='canvas', src=name)
+            block
+        body(style="background-color:" + background)
+            canvas#canvas(resize='')
